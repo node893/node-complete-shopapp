@@ -1,0 +1,24 @@
+<%- include('../includes/start.ejs') %>
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <main>  
+        <% if(errorMessage) {%>
+            <div class="errorMessage"><%= errorMessage %></div>
+        <% } %>
+        <form action="/signup" method="POST">
+            <div>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" value="<%= oldData.email %>" />
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" value="<%= oldData.password %>" />
+            </div>
+            <div>
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" value="<%= oldData.confirmpassword %>" />
+            </div>
+            <button>Signup</button>
+        </form>           
+    </main>
+<%- include('../includes/end.ejs') %>

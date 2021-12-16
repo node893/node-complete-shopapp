@@ -1,0 +1,35 @@
+<%- include('../includes/start.ejs') %>
+<body>
+  <%- include('../includes/navigation.ejs') %>
+  <main>
+    <section>
+      <% if(products.length === 0) { %>
+      <h1>No Products</h1>
+      <% } else { %> <% products.forEach(product => { %>
+      <article>
+        <div>
+          <h1><%= product.title%></h1>
+        </div>
+        <div>
+          <img src="/<%= product.imageUrl %>" alt="<%= product.title%>" />
+        </div>
+        <div>
+          <h1>$<%= product.price %></h1>
+        </div>
+        <div>
+          <p><%= product.description %></p>
+        </div>
+        <% if(isAuthenticated){ %>
+        <div>
+          <form method="POST" action="/cart">
+            <button type="submit">Add to Cart</button>
+            <input type="hidden" name="prodId" value="<%= product._id %>" />
+          </form>
+        </div>
+        <% } %>
+      </article>
+      <% })} %>
+    </section>
+  </main>
+  <%- include('../includes/end.ejs') %>
+</body>

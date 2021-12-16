@@ -1,0 +1,18 @@
+<%- include('../includes/start.ejs') %>
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <main class="item-display">
+                <div>
+                    <h1><%= product.title%></h1>
+                </div>
+                <div>                    
+                    <img src="/<%= product.imageUrl%>" alt="<%= product.title%>" style="width:20rem;" />
+                </div>
+                <div>                    
+                    <h1>$<%= product.price%></h1>
+                </div>
+                <div>                    
+                    <p><%= product.description %></p>
+                </div>    
+    </main>
+<%- include('../includes/end.ejs') %>

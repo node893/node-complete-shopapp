@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+}
+
+.main-header {
+  background: rgb(8, 175, 44);
+  padding: 2rem;
+}
+
+.main-header nav,
+ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header ul {
+  list-style: none;
+}
+
+.main-header a {
+  text-decoration: none;
+}
+
+.main-header a.active {
+  color: white;
+}
+
+.main-header li {
+  color: rgb(152, 73, 226);
+  margin: 0 1rem;
+  font-size: 1rem;
+}
+
+article {
+  text-align: center;
+  width: 20rem;
+  display:inline-block;
+}
+
+article img {
+  width: 15rem;
+}
+
+form {
+  width: 20rem;
+  max-width: 100%;
+  margin: 0.5rem auto;
+  font: inherit;
+}
+
+form div {
+  margin: auto;
+  width: 20rem;
+}
+
+form label,
+form input,
+form textarea {
+  display: block;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+button {
+  text-align: center;
+  padding: 0.5rem;
+  font: inherit;
+  margin: 0.5rem 0;
+  background-color: white;
+  color: rgb(8, 175, 44);
+  border: 1px solid rgb(8, 175, 44);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* button:hover,
+button.active {
+    background: rgb(152, 73, 226);
+    border: 1px solid rgb(152, 73, 226);
+    color: white;
+} */
+
+.errorMessage {
+  padding: 0.5rem;
+  background-color: rgb(255, 152, 140);
+  border: 2px solid red;
+  text-align: center;
+  width: 70rem;
+  margin: 0.5rem auto;
+  border-radius: 5px;
+}
+
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: white;
+  color: rgb(8, 175, 44);
+  border: 1px solid rgb(8, 175, 44);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.item-display {
+  text-align: center;
+}
+
+
+.inline-div a, 
+.inline-div form {
+  display: inline;
+}
